@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lexend:wght@500;600;700&display=swap");
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% -10%, rgba(108, 140, 255, 0.16), transparent 45%),
+    radial-gradient(circle at 100% 0%, rgba(255, 184, 107, 0.08), transparent 40%),
+    #0f1729;
+  font-family: "Manrope", "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.heading-font {
+  font-family: "Lexend", "Manrope", sans-serif;
+}
+
+/* Мягкое появление карточек/секций */
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-rise {
+  animation: fade-rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-rise {
+    animation: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #28365a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
